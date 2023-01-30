@@ -1,3 +1,4 @@
+import 'package:amader_kagoj/view/categories.dart';
 import 'package:amader_kagoj/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -21,11 +22,17 @@ class _BottomNavBarState extends State<BottomNavBar> {
     HomePage(),
   ];
 
+  GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
+          drawer: Drawer(child: Container()),
+          key: _drawerKey,
+         // drawer: Drawer(),
           appBar: AppBar(
             elevation: 0,
             title: Image.asset(
@@ -82,6 +89,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       ),
                     ),
                     GButton(
+                      onPressed: (){
+                        _drawerKey.currentState!.openDrawer();
+                      },
                       icon: Icons.menu_sharp,
                       iconActiveColor: Colors.white,
                       text: 'Sections',
