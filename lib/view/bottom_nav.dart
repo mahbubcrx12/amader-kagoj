@@ -1,5 +1,6 @@
 import 'package:amader_kagoj/view/categories.dart';
 import 'package:amader_kagoj/view/home_page.dart';
+import 'package:amader_kagoj/view/search.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
@@ -17,12 +18,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    HomePage(),
-    HomePage(),
+    Categories(),
+    SearchNews(),
     HomePage(),
   ];
 
-  GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+ // GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
 
   @override
@@ -30,8 +31,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     var size = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
-          drawer: Drawer(child: Container()),
-          key: _drawerKey,
+          // drawer: Drawer(child: Container()),
+          // key: _drawerKey,
          // drawer: Drawer(),
           appBar: AppBar(
             elevation: 0,
@@ -89,12 +90,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       ),
                     ),
                     GButton(
-                      onPressed: (){
-                        _drawerKey.currentState!.openDrawer();
-                      },
+                      // onPressed: (){
+                      //   _drawerKey.currentState!.openDrawer();
+                      // },
                       icon: Icons.menu_sharp,
                       iconActiveColor: Colors.white,
-                      text: 'Sections',
+                      text: 'Categories',
                       textStyle: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
