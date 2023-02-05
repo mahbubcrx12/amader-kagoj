@@ -13,7 +13,10 @@ class _SearchNewsState extends State<SearchNews> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors.green.withOpacity(.4),
       body: Container(
+       // height: MediaQuery.of(context).size.height,
+        color: Colors.green.withOpacity(.4),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(

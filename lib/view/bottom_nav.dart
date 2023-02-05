@@ -31,9 +31,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
     var size = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
-          // drawer: Drawer(child: Container()),
-          // key: _drawerKey,
-         // drawer: Drawer(),
           appBar: AppBar(
             elevation: 0,
             title: Image.asset(
@@ -46,11 +43,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
             backgroundColor: Colors.green.withOpacity(.4),
           ),
           body: Center(
+
             child: _widgetOptions.elementAt(_selectedIndex),
           ),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-              color: Colors.green.shade200,
+              color: Colors.green.withOpacity(.4),
               boxShadow: [
                 BoxShadow(
                   blurRadius: 20,

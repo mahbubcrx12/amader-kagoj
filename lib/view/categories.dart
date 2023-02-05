@@ -10,11 +10,12 @@ class Categories extends StatefulWidget {
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
-    //var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return Scaffold(
         body: Container(
+          height: size.height ,
           decoration: BoxDecoration(
-            color: Colors.green
+            color: Colors.green.withOpacity(.4),
           ),
           child: SingleChildScrollView(
             child: Column(
