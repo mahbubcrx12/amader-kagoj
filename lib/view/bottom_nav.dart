@@ -43,14 +43,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
               fit: BoxFit.cover,
             ),
             centerTitle: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.green.withOpacity(.4),
           ),
           body: Center(
             child: _widgetOptions.elementAt(_selectedIndex),
           ),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.green.shade200,
               boxShadow: [
                 BoxShadow(
                   blurRadius: 20,
